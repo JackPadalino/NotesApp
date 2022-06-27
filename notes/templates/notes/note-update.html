@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="note-card">
+        <div class="card-body">
+            <form id='save-note-form' method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <h2>{{ object.title }}</h2>
+                    {{ form|crispy }}
+                </fieldset>
+                <br>
+            </form>
+            <button class="btn btn-outline-dark btn-sm" form='save-note-form' type='submit'>Save Note</button>
+            <a class="btn btn-outline-danger btn-sm" href="{% url 'note-delete' object.pk %}">Delete</a>
+        </div>
+    </div>
+    <script>
+        
+    </script>
+{% endblock content %}

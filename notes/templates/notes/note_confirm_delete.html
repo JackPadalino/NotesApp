@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Delete Note</legend>
+                <h4>Are you sure you want to delete the note '{{ object.title }}'?</h4>
+            </fieldset>
+            <br>
+            <div class='form-group'>
+                <button class="btn btn-outline-danger btn-sm" type='submit'>Yes, Delete</button>
+                <a class="btn btn-outline-dark btn-sm" href="{% url 'note-update' object.id %}">Cancel</a>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

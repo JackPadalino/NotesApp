@@ -1,0 +1,29 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <!--<h1>{{ category.title }}</h1>
+    <h1>{{ category.pk }}</h1>-->
+    <div class='master-category-notes-div'>
+        <div class='category-notes-title-div'>
+            <h1>{{ category.title }}</h1>
+        </div>
+        <div class='category-create-note-button-div'>
+            <a class="btn btn-outline-dark btn-sm" href= "{% url 'create-note' category.pk %}">Add new note</a>
+        </div>
+        <div class="category-notes-list-div">
+            {% for note in notes %}
+                <div class="note-card" draggable="true">
+                    <div class="card-body">
+                        <h2><a class='card-title-link' href="{% url 'note-update' note.pk %}">{{ note.title}}</a></h2>
+                        <div class='card-content'>
+                            <p class="card-text">{{ note.content }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class='category-delete-button-div'>
+            <a class="btn btn-outline-danger btn-sm" href="{% url 'category-delete' category.pk %}">Delete category</a>
+        </div>
+    </div>
+{% endblock content %}

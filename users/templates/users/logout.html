@@ -1,0 +1,11 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<h1>See you later!</h1>
+<div class='col-md-5'>
+    <div class="border-top pt-3">
+        <small class='text-muted'>
+            <a class='login-logout-register' href="{% url 'login' %}">Log in again?</a>
+        </small>
+    </div>
+</div>
+{% endblock content %}

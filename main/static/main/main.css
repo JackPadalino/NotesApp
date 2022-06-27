@@ -1,0 +1,141 @@
+/*~~~~~CSS for main page and navbar~~~~~*/
+body{
+  background: #fff3bc;
+  padding-left:20px;
+  padding-right:20px;
+  }
+
+.navbar{
+  background-color: #fff3bc;
+}
+
+.main-page-container{
+ padding-top:20px;
+}
+
+.card-title-link{
+  color: #000000 !important;
+  text-decoration: none;
+}
+
+/*~~~~~CSS for welcome page~~~~~*/
+.welcome-div{
+  display:flex;
+  justify-content: center;
+}
+
+.welcome-title{
+  font-size:70px;
+}
+
+/*~~~~~CSS for main page and navbar~~~~~*/
+.notes-grid{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.home-note-card{
+  width: fit-content; /*1 rem = 16px*/
+  height:fit-content;
+  padding-top:auto;
+  box-shadow: 5px 5px 5px grey;
+  border: 1px solid #ffe882;
+  border-radius: 10px;
+  background-color: #ffe882;
+  margin-bottom:10px;
+  /*float:left;*/
+  /*height:fit-content;*/
+  /*overflow: auto;*/
+  /*overflow:hidden;*/
+}
+
+.home-grid-container{
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+}
+
+.note-card{
+  width: 314px; /*1 rem = 16px*/
+  height:auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 5px grey;
+  border: 1px solid #ffe882;
+  border-radius: 10px;
+  background-color: #ffe882;
+  /*float:left;*/
+  /*height:fit-content;*/
+  /*overflow: auto;*/
+  /*overflow:hidden;*/
+}
+
+.note-card-content{
+  white-space: pre-line;
+  /*overflow: hidden;*/
+  /*height: 250px;
+  overflow-x: hidden;
+  overflow-y: auto;*/
+}
+
+.card-content{
+  white-space: pre-line;
+}
+
+.login-logout-register{
+  text-decoration: none;
+  color:black;
+}
+
+/*~~~~~CSS for categories page~~~~~*/
+.master-categories-div{
+  display:flex;
+  flex-direction: column;
+  row-gap:30px;
+}
+
+.categories-title-div{
+  display:flex;
+  justify-content:center;
+}
+
+.create-category-button-div{
+  display:flex;
+  justify-content:center;
+}
+
+.category-list-div{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:left;
+}
+
+/*~~~~~CSS for create new category page~~~~~*/
+
+
+/*~~~~~CSS for category notes page~~~~~*/
+.master-category-notes-div{
+  display:flex;
+  flex-direction: column;
+  row-gap:20px;
+}
+
+.category-notes-title-div{
+  display:flex;
+  justify-content:center;
+}
+
+.category-create-note-button-div{
+  display:flex;
+  justify-content:center;
+}
+
+.category-notes-list-div{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:left;
+}
+
+.category-delete-button-div{
+  display:flex;
+  justify-content:center;
+}

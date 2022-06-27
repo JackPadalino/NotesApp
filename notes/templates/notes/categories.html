@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <div class='master-categories-div'>
+        <div class='categories-title-div'>
+            <h1>My Notes</h1>
+        </div>
+        <div class='create-category-button-div'>
+            <a class="btn btn-outline-dark btn-sm" href= "{% url 'create-category' %}">Add new category</a>
+        </div>
+        <div class="category-list-div">
+            {% for category in categories %}
+                <div class="note-card" draggable="true">
+                    <div class="card-body">
+                        <h2><a class='card-title-link' href="{% url 'category-notes' category.pk %}">{{ category.title}}</a></h2>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!--<br><br>
+    
+{% endblock %}
